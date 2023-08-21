@@ -16,7 +16,7 @@ int main() {
 
     // Guardar la cantidad de naipes
     int cantidadNaipes = 52;
-    archivoBinario << cantidadNaipes;
+    archivoBinario.write((char*) &cantidadNaipes, sizeof(int));
 
     int contadorPalos = 1;
     int contadorNaipe = 1;
@@ -64,7 +64,7 @@ int main() {
         }
 
         // Escribir el naipe al archivo
-        archivoBinario << naipeActual;
+        archivoBinario.write((char*) &naipeActual, sizeof(Naipe));
 
         // Aumentar el contador del número de carta
         contadorNaipe++;
