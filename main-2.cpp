@@ -70,7 +70,7 @@ Naipe robar_carta(Naipe* arreglo, int& cartas_disponibles){
 }
 
 /****************************************
-* char color_carta
+* int color_carta
 * **************************************
 * Crea un contador de el color de los naipes
 * **************************************
@@ -82,14 +82,14 @@ Naipe robar_carta(Naipe* arreglo, int& cartas_disponibles){
 *      colores : Arreglo de dos elementos que contiene la cantidad de negras y de rojas
 ***************************************/
 
-char color_carta (Naipe carta, int cantidad_cartas){
+int color_carta (Naipe carta, int cantidad_cartas){
     int Rojo = 0;
     int Negro = 0;
     for (int z = 0; z < cantidad_cartas; z++){
         if (carta.color == "R"){
             Rojo++;
         } else {
-            Negro++
+            Negro++;
         }
     }
     int colores[2];
