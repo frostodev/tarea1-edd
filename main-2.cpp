@@ -70,7 +70,7 @@ Naipe robar_carta(Naipe* arreglo, int& cartas_disponibles){
 }
 
 /****************************************
-* int * comprarTarjeta
+* char color_carta
 * **************************************
 * Crea un contador de el color de los naipes
 * **************************************
@@ -79,7 +79,7 @@ Naipe robar_carta(Naipe* arreglo, int& cartas_disponibles){
 *      int cantidad_cartas  :   Entero que contiene la cantidad total de cartas
 * **************************************
 * Returns:
-*       
+*      colores : Arreglo de dos elementos que contiene la cantidad de negras y de rojas
 ***************************************/
 
 char color_carta (Naipe carta, int cantidad_cartas){
