@@ -86,8 +86,16 @@ char color_carta (Naipe carta, int cantidad_cartas){
     int Rojo = 0;
     int Negro = 0;
     for (int z = 0; z < cantidad_cartas; z++){
+        if (carta.color == "R"){
+            Rojo++;
+        } else {
+            Negro++
+        }
     }
-    return '1';
+    int colores[2];
+    colores[0] = Rojo;
+    colores[1] = Negro;
+    return colores;
 }
 
 int main(){
@@ -106,9 +114,10 @@ int main(){
         Naipe* baraja = crear_baraja();
         int cartas_repartir = 5;
         archivo.open(juego + jugadores_string + ".txt", ios::binary);
-        if (jugadores < 2 or jugadores > 7)
+        if (jugadores < 2 or jugadores > 7){
+            cout << "La cantidad de jugadores no es valida" << endl;   
             return 0;
-        for (int i = 0; i < jugadores; i++){
+        }for (int i = 0; i < jugadores; i++){
             for (int j = 0; j < cartas_repartir ; j++){
                 robar_carta(baraja, cartas_repartir);
             }
@@ -122,9 +131,10 @@ int main(){
         int cartas_repartir = 15;
         // son 2 barajas
         archivo.open(juego + jugadores_string + ".txt", ios::binary);
-        if (jugadores < 2 or jugadores > 6)
+        if (jugadores < 2 or jugadores > 6){
+            cout << "La cantidad de jugadores no es valida" << endl;   
             return 0;
-        for (int i = 0; i < jugadores; i++){
+        }for (int i = 0; i < jugadores; i++){
 
         }
     }
@@ -133,9 +143,10 @@ int main(){
         Naipe* baraja = crear_baraja();
         int cartas_repartir = 4;
         archivo.open(juego + jugadores_string + ".txt", ios::binary);
-        if (jugadores < 2 or jugadores > 6)
+        if (jugadores < 2 or jugadores > 6){
+            cout << "La cantidad de jugadores no es valida" << endl;   
             return 0;
-        for (int i = 0; i < jugadores; i++){
+        }for (int i = 0; i < jugadores; i++){
             robar_carta(baraja, cartas_repartir);
         }
     }
