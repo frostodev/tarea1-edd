@@ -1,0 +1,28 @@
+1.- Sebastian Antonio Albornoz Bustamante 202273585-6 Par. 200
+     Programador de:
+      - main() (parte 2)
+         // Hacer las entradas
+         // Configurar las variables
+         // Tester
+  	 // Encontrar la posición de las cartas repartidas
+      - Naipe robar_carta() 
+         // Saca una carta del struct y luego elimina esa carta
+
+2.- Sergio Ignacio Cárcamo Naranjo 202273512-0 Par. 200
+     Programador de:
+      - main() (parte 1)
+         // Crear el archivo binario
+         // Generar un arreglo de Naipes
+         // Organizar los Naipes
+         // Guardar el archivo
+      - Naipe *crear_baraja()
+         // Leer el arreglo de Naipes del archivo
+         // Generar la baraja a partir del arreglo
+
+3.- Sergio Roberto Rojas Gutierrez 202273619-4 Par. 200
+     Programador de:
+      - Comentarios
+         // Todos los comentarios
+      - char color_carta()
+         // Cuenta la cantidad de cartas de ambos colores que están repartidas en las manos
+         // las une en un arreglo de dos elementos, uno con la cantidad de negras y otro con la cantidad de rojas
