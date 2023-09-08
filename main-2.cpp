@@ -46,11 +46,8 @@ char color_carta (Naipe carta, int cantidad_cartas){
     int Rojo = 0;
     int Negro = 0;
     for (int z = 0; z < cantidad_cartas; z++){
-        if ('R' == carta[z].color){
-            Rojo++
-        }
     }
-    return ;
+    return '1';
 }
 
 int main(){
