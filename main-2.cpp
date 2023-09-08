@@ -9,6 +9,19 @@ struct Naipe {
     char color;
 };
 
+/****************************************
+* Naipe * crearBaraja
+* **************************************
+* Lee el archivo baraja.dat y genera un arreglo de naipes (baraja)
+* **************************************
+*  Input:
+*       No tiene
+* **************************************
+* Returns:
+*       Naipe arregloBaraja[i], con i siendo un arreglo de naipes que será usado como
+*       baraja.
+***************************************/
+
 Naipe *crear_baraja () {
     ifstream archivo_entrada;
     archivo_entrada.open("baraja.dat", ios::binary);
@@ -32,6 +45,20 @@ Naipe *crear_baraja () {
     return arregloBaraja;
 }
 
+/****************************************
+* Naipe robar_carta
+* **************************************
+* Toma una carta del arreglo, y la elimina de este.
+* **************************************
+*  Input:
+*      Naipe* arreglo   :   Arreglo de naipes (baraja)
+*      int &cartas_disponibles  :   Referencia de entero que contiene la cantidad de
+*                                   cartas disponibles
+* **************************************
+* Returns:
+*      Naipe carta_robada   :   Un naipe sacado del arreglo
+***************************************/
+
 Naipe robar_carta(Naipe* arreglo, int& cartas_disponibles){
     int indice = rand() % cartas_disponibles;
     Naipe carta_robada = arreglo[indice];
@@ -41,6 +68,19 @@ Naipe robar_carta(Naipe* arreglo, int& cartas_disponibles){
     cartas_disponibles--;
     return carta_robada;
 }
+
+/****************************************
+* int * comprarTarjeta
+* **************************************
+* Crea un contador de el color de los naipes
+* **************************************
+*  Input:
+*      Naipe carta  :   Naipe de donde obtener el color
+*      int cantidad_cartas  :   Entero que contiene la cantidad total de cartas
+* **************************************
+* Returns:
+*       
+***************************************/
 
 char color_carta (Naipe carta, int cantidad_cartas){
     int Rojo = 0;
