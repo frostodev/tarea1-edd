@@ -23,6 +23,6 @@
      Programador de:
       - Comentarios
          // Todos los comentarios
-      - char color_carta()
+      - color_carta
          // Cuenta la cantidad de cartas de ambos colores que están repartidas en las manos
          // las une en un arreglo de dos elementos, uno con la cantidad de negras y otro con la cantidad de rojas
