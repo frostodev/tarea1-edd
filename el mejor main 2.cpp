@@ -70,7 +70,19 @@ Naipe robar_carta(Naipe *arreglo, int &cartas_disponibles) {
 }
 
 int leer_carta(Naipe carta_robar) {
-
+  /********************************************************************************************************************
+  * int leer_carta
+  * *******************************************************************************************************************
+  * Lee la baraja original del archivo "baraja.dat" y genera un archivo de tamaño n que está en la primera linea del 
+  * archivo, luego genera un arreglo de ese tamaño y empieza a comparar carta por carta hasta encontrar la carta que 
+  * coincida con la carta robada, luego guarda su posición y la retorna al main
+  * *******************************************************************************************************************
+  * Imput:
+  * Naipe carta_robar : Recibe una carta que fue robada y la compara con la baraja original para encontrar la posición
+  * *******************************************************************************************************************
+  * Returns:
+  * posición : retorna un entero que es la posición de la carta robada en el arreglo original del archivo "baraja.dat"
+  *********************************************************************************************************************/
   ifstream archivoBinario;
   archivoBinario.open("baraja.dat", ios::binary);
 
