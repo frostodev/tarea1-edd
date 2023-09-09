@@ -11,18 +11,18 @@ struct Naipe {
 
 Naipe *crear_baraja(int &cartas_disponibles) {
   /*******************************************************************************************************************
-	 * Naipe *crear_baraja
-	 * *****************************************************************************************************************
-	 * Extrae informacion del archivo "baraja.dat" 
-   *
-	 * Importante: Retorna 1 si no se pudo abrir el archivo.
-	 * *****************************************************************************************************************
-	 * 	Imput:
-	 * 		int &cartas_disponibles : Usando paso por referencia para devolver al programa la cantidad de cartas disponibles sin hacer un retorno directo 
-	 * *****************************************************************************************************************
-	 * 	Returns:
-	 * 		arregloBaraja : Un arreglo con todas la baraja extraída de "barajas.dat"
-	*******************************************************************************************************************/
+  * Naipe *crear_baraja
+  * *****************************************************************************************************************
+  * Extrae informacion del archivo "baraja.dat" 
+  *
+  * Importante: Retorna 1 si no se pudo abrir el archivo.
+  * *****************************************************************************************************************
+  * Imput:
+  * int &cartas_disponibles : Usando paso por referencia para devolver al programa la cantidad de cartas disponibles sin hacer un retorno directo 
+  * *****************************************************************************************************************
+  * Returns:
+  * arregloBaraja : Un arreglo con todas la baraja extraída de "barajas.dat"
+  *******************************************************************************************************************/
   
   ifstream archivo_entrada;
   archivo_entrada.open("baraja.dat", ios::binary);
