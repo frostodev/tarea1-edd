@@ -35,6 +35,7 @@ Naipe robar_carta(Naipe *arreglo, int &cartas_disponibles) {
 
   return carta_robada;
 }
+
 int leer_carta(Naipe carta_robar) {
   ifstream archivoBinario;
   archivoBinario.open("baraja.dat", ios::binary);
