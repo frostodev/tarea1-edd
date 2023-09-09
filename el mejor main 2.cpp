@@ -47,6 +47,19 @@ Naipe *crear_baraja(int &cartas_disponibles) {
 }
 
 Naipe robar_carta(Naipe *arreglo, int &cartas_disponibles) {
+  /*******************************************************************************************************************
+  * Naipe robar_carta
+  * *****************************************************************************************************************
+  * Desde el arreglo de cartas disponibles usa la función rand() para extraer una de forma aleatoria
+  *
+  * *****************************************************************************************************************
+  * Imput:
+  * int &cartas_disponibles : Usando paso por referencia para devolver al programa la cantidad de cartas disponibles sin hacer un retorno directo 
+  * Naipe *arreglo : Recibe un arreglo de todas las cartas disponibles para escoger una al azar
+  * *****************************************************************************************************************
+  * Returns:
+  * carta_robada : Retorna la carta que fue robada del arreglo entregado
+  *******************************************************************************************************************/
   int indice = rand() % cartas_disponibles;
   Naipe carta_robada = arreglo[indice];
 
@@ -57,6 +70,7 @@ Naipe robar_carta(Naipe *arreglo, int &cartas_disponibles) {
 }
 
 int leer_carta(Naipe carta_robar) {
+
   ifstream archivoBinario;
   archivoBinario.open("baraja.dat", ios::binary);
 
