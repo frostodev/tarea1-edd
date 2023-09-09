@@ -56,6 +56,7 @@ int leer_carta(Naipe carta_robar) {
   archivoBinario.close();
   return posicion;
 }
+
 int main() {
   srand(time(nullptr));
   ofstream salida;
@@ -68,7 +69,8 @@ int main() {
   cin >> juego;
 
   if (juego == "P") {
-    int cartas_disponibles = 52;
+    int Rojo, Negro = 0;
+    int cartas_disponibles;
 
     salida.open(juego + to_string(jugadores) + ".txt");
 
@@ -86,16 +88,26 @@ int main() {
       for (int j = 0; j < cartas_repartir; j++) {
 
         Naipe carta_robada = robar_carta(baraja, cartas_disponibles);
-
+        if (carta_robada.color == 'R'){
+          Rojo++;
+        }
+        else{
+          Negro++;
+        }
         salida << leer_carta(carta_robada) << " ";
       }
       salida << endl;
     }
   
     salida.close();
+
+    delete[] baraja;
+    cout << "Cartas rojas: " << Rojo<< endl;
+    cout << "Cartas negras: " << Negro << endl;
   }
-    if (juego == "B") {
-      int cartas_disponibles = 52;
+  if (juego == "B") {
+      int Rojo, Negro = 0;
+      int cartas_disponibles;
 
       salida.open(juego + to_string(jugadores) + ".txt");
 
@@ -113,16 +125,25 @@ int main() {
         for (int j = 0; j < cartas_repartir; j++) {
 
           Naipe carta_robada = robar_carta(baraja, cartas_disponibles);
-
+        if (carta_robada.color == 'R'){
+          Rojo++;
+        }
+        else{
+          Negro++;
+        }
           salida << leer_carta(carta_robada) << " ";
         }
         salida << endl;
       }
       salida.close();
-    }
-      if (juego == "C") {
 
-        int cartas_disponibles = 104;
+      delete[] baraja;
+      cout << "Cartas rojas: " << Rojo<< endl;
+      cout << "Cartas negras: " << Negro << endl;
+  }
+      if (juego == "C") {
+        int Rojo, Negro = 0;
+        int cartas_disponibles;
 
         salida.open(juego + to_string(jugadores) + ".txt");
 
@@ -140,7 +161,12 @@ int main() {
             for (int j = 0; j < cartas_repartir; j++) {
 
                 Naipe carta_robada = robar_carta(baraja, cartas_disponibles);
-
+                if (carta_robada.color == 'R'){
+                  Rojo++;
+                }
+                else{
+                  Negro++;
+                }
                 salida << leer_carta(carta_robada) << " ";
             }
             salida << endl;
@@ -148,11 +174,9 @@ int main() {
         salida.close();
       
         delete[] baraja;
+        cout << "Cartas rojas: " << Rojo<< endl;
+        cout << "Cartas negras: " << Negro << endl;
       }
-       else {
-        cout << "Juego no reconocido" << endl;
-      }
-
       return 0;
     }
   
